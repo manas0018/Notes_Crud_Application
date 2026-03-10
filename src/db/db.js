@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 async function connectDB(){
-    await mongoose.connect('mongodb+srv://MANAS_db_user:KawCIRClRtwOZlYN@manasbackend.nf2anxc.mongodb.net/project-1');
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("DB Connected");
 }
 
